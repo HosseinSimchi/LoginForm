@@ -21,61 +21,157 @@ body{
     background-color: hsl(234, 29%, 20%);
 }
 
-section {
-    margin : 15vh 47vh;
-    width: 800px;
-    height: 480px;
+.grid-container {
+    display:grid;
+    justify-content: space-around;
+    grid-template-rows: 16vh 65vh 16vh;
+    grid-template-columns: 2vh 96vh 2vh;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
     background-color: white;
-    border-radius: 50px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 60% 40%;
+    border-radius: 35px;
 }
 
-section .container {
+.left {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    display: grid;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-section .container .left-side {
-    width: 48%;
-    height: 100%;
-
-}
-
-section .container .left-side .left {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    margin: 75px 50px;
-}
-
-section .container .left-side .left h1 {
-    font-family: 'Roboto-Bold';
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    padding: 35px;
     color: hsl(234, 29%, 20%);
-    font-size: 40px;
-    margin-bottom: 10px;
 }
 
-section .container .left-side .left span {
-    font-size: 16px;
-    font-weight: 300px;
-    color : hsl(235, 18%, 26%);
-    margin-bottom: 20px;
-}
-
-section .container .right-side {
-    width: 48%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section .container .right-side img {
+.left .title {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
     width: 100%;
-    height: 94%;
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    justify-self: start;
+    align-self: center;
+    padding: 15px;
+    font-size: 40px;
+    font-family: 'Roboto-Bold';
 }
+
+.left .title-description {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 100%;
+    justify-self: start;
+    align-self: center;
+    padding: 15px;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.left .Unorder-list{
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 100%;
+    justify-self: start;
+    align-self: center;
+    padding: 15px;
+    font-size: 12px;
+}
+.left .Unorder-list li {
+    display: flex;
+    line-height: 2.5;
+}
+
+.left .Unorder-list li img{
+    width: 5%;
+    vertical-align:center;
+    margin-right: 10px;
+}
+
+.left .Unorder-list li p{
+    vertical-align:center;
+}
+
+
+.left .input {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+    justify-self: start;
+    align-self: center;
+    margin-left: 15px;
+}
+
+.left .input label {
+    font-size: 9px;
+}
+
+.left .input input{
+    padding: 8px;
+    margin-top: 5px;
+    outline: none;
+    border: 1px solid black;
+    width: 100%;
+    height:50%;
+    border-radius: 7px;
+}
+
+.left .input input:hover{
+    cursor: pointer;
+}
+
+.left button {
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
+    justify-self: start;
+    align-self: center;
+    margin-left: 15px;
+    width: 72%;
+    height:50%;
+    border: 1px solid black;
+    border-radius: 7px;
+    position: relative;
+    z-index: 1;
+    font-size: 10px;
+    padding: 5px;
+}
+
+.left button:hover{
+    cursor: pointer;
+}
+
+.left button::after{
+    content: "";    
+    position: absolute;
+    top:0;
+    right:0;
+    width: 0;
+    height: 100%;
+    background-color: aqua;
+    border-radius: 7px;
+    z-index: -1;
+    transition: all 0.7s ease;
+}
+
+.left button:hover::after{
+    content: "";
+    width: 100%;
+    transition: all 0.7s ease;
+}
+
+.right {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+}
+
 
