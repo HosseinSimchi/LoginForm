@@ -1,0 +1,28 @@
+@media screen and (max-width:992px){
+    .left .title-description, .left .Unorder-list{
+        font-size: 15px;
+    }
+    
+    .left .Unorder-list li {
+        line-height: 2;
+        font-size: 11px;
+    }
+
+    .left .Unorder-list li img {
+        width: 20px;
+    }
+    .left .title {
+        font-size: 45px;
+    }
+    .left button {
+        width: 87%;
+        padding: 8px;
+    }
+    .left .input input {
+        height: 60%;
+        padding: 12px;
+    }
+    .left .input label {
+        font-size: 12px;
+    }
+}
